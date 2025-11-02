@@ -1,4 +1,10 @@
-import { CameraControls, Environment, Float, Gltf } from "@react-three/drei";
+import {
+  CameraControls,
+  Environment,
+  Float,
+  Gltf,
+  useGLTF,
+} from "@react-three/drei";
 import { button, useControls } from "leva";
 import { useEffect, useRef, useState } from "react";
 import { degToRad } from "three/src/math/MathUtils.js";
@@ -194,3 +200,5 @@ export const Experience = ({ section }) => {
     </>
   );
 };
+
+useGLTF.preload("models/apple_iphone_17_pro_max.glb");
